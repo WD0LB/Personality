@@ -1,0 +1,231 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	height: 100vh;
+}
+
+/*header*/
+	nav
+	{
+		width: 100%;
+		background: #858585;
+		position: sticky;
+		top: 0;
+		margin-bottom: 6px;
+	}
+	nav ul
+	{
+		width: 80%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	nav ul li
+	{
+		list-style: none;
+		display: inline-block;
+		padding: 20px;
+	}
+	nav ul li:hover
+	{
+		background: #d5cdcd;
+	}
+	nav ul li a
+	{
+		color: #fff;
+		text-decoration: none;
+	}
+	nav div#li1Cont,nav  div#li2Cont {
+		display: none;
+	}
+	nav ul li#tgLi1:hover div#li1Cont, nav ul li#tgLi2:hover div#li2Cont {
+		display: block;
+	}
+	.active
+		{
+			display: block;
+		}
+	.toggle
+	{
+		width: 100%;
+		padding: 10px 20px;
+		background: #887777;
+		text-align: center;
+		box-sizing: border-box;
+		color: #fff;
+		font-size: 30px;
+		cursor: pointer;
+		border-bottom: solid #ffe2ad;
+		display: none;
+	}
+	.navCont {
+	    border: solid #858585;
+	    border-bottom-right-radius: 10px;
+	    border-top: none;
+	    border-left: none;
+	    display: block;
+	    position: absolute;
+	    top: auto;
+	    background: #a29b9bd9;
+	    opacity: .9;
+	    width: 40%;
+	    max-height: 150px;
+	    overflow: auto;
+	    cursor: pointer;
+	}
+
+/*home container*/
+	.container {
+		width: 80%;
+		background: #8585859e;
+		padding: 20px;
+		border-radius: 10px;
+		box-sizing: border-box;
+		color: #dbdbdb;
+    	font-weight: bold;
+    	margin: auto;
+	}
+	.title {
+		background: #ffe2ad;
+	    padding: 10px;
+	    width: 98%;
+	    margin-left: 1%;
+	    text-align: center;
+	    border-radius: 5px;
+	    box-sizing: border-box;
+	    cursor: pointer;
+	    transition: .4s linear;
+	}
+	div.title span {
+	    color: grey;
+	    font-size: 26px;
+	    font-family: cursive;
+	}
+	div.title:hover {
+		transform: scale(1.08);
+	}
+	div.choice {
+		margin-top: 8px;
+		border-radius: 10px;
+		display: flex;
+		background: #f6be58d6;
+	    padding: 10px;
+	    align-items: center;
+	    justify-content: center;
+	    flex-wrap: wrap;
+	}
+	div.choice div {
+		border: solid #959595;
+		border-radius: 20px;
+		padding: 2px;
+		min-width: 30%;
+		min-height: 4em;
+		transition: .2s cubic-bezier(0.4, 0, 0.2, 1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 4px;
+		font-family: cursive;
+    	font-weight: bolder;
+    	cursor: pointer;
+	}
+	div.choice div:hover {
+		transform: scale(1.08);
+	}
+	div#div1 {
+		background: red;
+		color: #ffbbbb;
+	}
+	div#div2 {
+		background: green;
+		color: #bfffbf;
+	}
+	div#div3 {
+		background: white;
+	}
+	div#div4 {
+		background: yellow;
+		color: #a6a630;
+	}
+	div#div5 {
+		background: blue;
+		color: #a3a3e6;
+	}
+	div#div6 {
+		background: black;
+		color: white;
+	}
+
+/*card container*/
+	.h2Cont {
+		display: block; 
+		width: fit-content;
+		margin: 0;
+	    background: #b3b3b3e0;
+	    padding: 4px;
+	    border-bottom: 2px solid #3d3d3d;
+	    border-radius: 12px;
+	    cursor: pointer;
+	    color: #fffaf3;
+	    transition: .5s;
+	}
+	.h2Cont:hover {
+		transform: scale(1.06);
+	}
+	div.content {
+		border: solid #c8d1ff;
+	    padding: 4px;
+	    border-radius: 12px;
+	    margin: 4px;
+	}
+	div.content p ul {
+		display: flex;
+		flex-flow: column;
+	}
+	div.content p ul li {
+		margin: 0;
+		transition: .2s;
+	}
+	div.content p ul li:hover {
+		border-bottom:solid #858585;
+		padding: 4px;
+		display: block;
+		background: #9ca39c87;
+		transform: scaleY(1.01);
+	}
+
+/*media*/
+	@media (max-width: 790px)
+	{
+		.toggle
+		{
+			display: block;
+		}
+		nav ul
+		{
+			width: 100%;
+			display: none;
+		}
+		nav ul li
+		{
+			display: block;
+			text-align: center;
+		}
+		nav ul li#tgLi1:hover div#li1Cont, nav ul li#tgLi2:hover div#li2Cont {
+			display: contents;
+			text-align: center;
+		}
+		nav ul li#tgLi1:hover ul, nav ul li#tgLi2:hover ul {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+		.container, .title {
+			padding: 0;
+			margin: 0 auto;
+		}
+	}
